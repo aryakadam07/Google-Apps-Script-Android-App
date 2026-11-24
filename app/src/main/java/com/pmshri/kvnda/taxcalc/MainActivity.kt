@@ -261,6 +261,11 @@ class MainActivity : AppCompatActivity(), WebViewManager.WebViewEventListener {
     override fun onPrintRequested() {
         runOnUiThread {
             try {
+                Toast.makeText(
+                    this,
+                    "Preparing PDF / Print preview...",
+                    Toast.LENGTH_SHORT
+                ).show()
                 val printManager = getSystemService(Context.PRINT_SERVICE) as? PrintManager
                 if (printManager != null) {
                     val jobName = "Income_Tax_Calculation_2026_27_KV_NDA"

@@ -68,17 +68,24 @@
                         android:singleLine="true" />
                 </LinearLayout>
 
-                <!-- Print / Save PDF Button (Quick Action) -->
-                <ImageButton
+                <!-- Print / Save PDF Button (Always accessible Quick Action) -->
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnQuickPrint"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:src="@drawable/ic_print"
-                    android:contentDescription="@string/btn_print"
-                    android:visibility="gone"
-                    android:tooltipText="@string/btn_print"
-                    app:tint="@android:color/white" />
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="@string/btn_print_short"
+                    android:textSize="12sp"
+                    android:textColor="@color/primary"
+                    app:backgroundTint="#FFFFFF"
+                    app:icon="@drawable/ic_print"
+                    app:iconTint="@color/primary"
+                    app:iconSize="16dp"
+                    app:cornerRadius="18dp"
+                    android:layout_marginEnd="6dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="12dp"
+                    android:visibility="visible" />
 
                 <!-- Refresh Button -->
                 <ImageButton

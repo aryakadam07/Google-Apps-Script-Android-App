@@ -7,6 +7,7 @@
     <string name="btn_retry">Retry Connection</string>
     <string name="btn_refresh">Refresh Page</string>
     <string name="btn_print">Save / Print PDF</string>
+    <string name="btn_print_short">PDF / Print</string>
     <string name="loading_text">Loading Income Tax Portal…</string>
     <string name="exit_confirm_title">Exit Application</string>
     <string name="exit_confirm_msg">Are you sure you want to close KV NDA Tax Calculator?</string>

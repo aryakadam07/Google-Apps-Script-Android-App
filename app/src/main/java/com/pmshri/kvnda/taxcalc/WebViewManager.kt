@@ -18,6 +18,8 @@ import android.webkit.WebResourceResponse
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import androidx.webkit.WebViewCompat
+import androidx.webkit.WebViewFeature
 
 /**
  * Encapsulates WebView configuration, security settings, WebChromeClient, and WebViewClient
@@ -114,6 +116,23 @@ class WebViewManager(
             ),
             "AndroidBridge"
         )
+
+        // 9. Document Start script injected into all sub-frames (including GAS userCodeAppPanel iframe)
+        if (WebViewFeature.isFeatureSupported(WebViewFeature.DOCUMENT_START_SCRIPT)) {
+            val bridgeScript = """
+                (function() {
+                    window.print = function() {
+                        if (window.AndroidBridge && window.AndroidBridge.printDocument) {
+                            window.AndroidBridge.printDocument();
+                        }
+                    };
+                })();
+            """.trimIndent()
+            try {
+                WebViewCompat.addDocumentStartJavaScript(webView, bridgeScript, setOf("*"))
+            } catch (_: Exception) {
+            }
+        }
     }
 
     private fun setupClients() {
