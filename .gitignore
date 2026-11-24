@@ -1,0 +1,42 @@
+# Built application files
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Gradle files
+.gradle/
+build/
+app/build/
+
+# Local configuration
+local.properties
+
+# Log files
+*.log
+
+# Android Studio and IntelliJ files
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+
+# Signing keys & keystores (CRITICAL: Never commit credentials)
+*.jks
+*.keystore
+keystore/
+*.p8
+*.p12
+*.key
+*.pepk
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Android NDK
+.externalNativeBuild
+.cxx/

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Solid primary blue background -->
+    <item>
+        <color android:color="#174A7E"/>
+    </item>
+    <!-- Centered Logo -->
+    <item
+        android:drawable="@drawable/ic_school_logo"
+        android:gravity="center"
+        android:width="128dp"
+        android:height="128dp"/>
+</layer-list>
